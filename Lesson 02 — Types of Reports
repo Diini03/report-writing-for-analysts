@@ -1,0 +1,66 @@
+# Lesson 2 — Types of Reports
+
+## Why this lesson matters
+
+Beginners write one kind of report no matter the situation — usually a long "here's everything I found" summary. Experienced analysts pick the *type* of report to match the situation first, then write it. The type shapes the length, the tone, and even which chart goes first.
+
+There are five types you'll run into again and again as a data analyst. Learn to recognize which one a situation calls for before you write a single line.
+
+## The five types
+
+### 1. Descriptive / Status Report
+**What it does:** Answers "where do things stand right now?" No deep analysis — just a clean, accurate snapshot.
+**When it's used:** Weekly/monthly business reviews, a manager asking "how are we tracking against target?"
+**Example (Superstore-style sales data):** *"August revenue: $412K, 6% below target. West region is the only one on pace; East and Central are both trailing."*
+That's it — no deep "why" yet. Just the facts, clearly.
+
+### 2. Diagnostic Report
+**What it does:** Answers "why did this happen?" Goes one level deeper than status — looks for the cause.
+**When it's used:** Something moved unexpectedly (sales dropped, churn spiked, a metric broke its normal pattern) and someone needs to know why before deciding what to do.
+**Example (Netflix-style churn data):** *"Churn rose 4% this quarter. The increase is concentrated among Basic-plan users inactive for 14+ days — this points to disengagement, not price, as the driver."*
+Notice the difference from status: status says churn rose, diagnostic explains *why*.
+
+### 3. Predictive / Forward-looking Report
+**What it does:** Answers "what's likely to happen next if nothing changes?" Uses trends, patterns, or a model to project forward.
+**When it's used:** Planning, budgeting, early-warning situations.
+**Example (COVID-19 case data):** *"At the current growth rate, projected case counts will exceed ICU capacity within 12 days if no intervention occurs."*
+This is where your ML/classifier background actually connects directly to report writing — a model's output becomes the evidence behind a predictive report.
+
+### 4. Recommendation / Decision Report
+**What it does:** Answers "given all of this, what should we do?" This is the report type your interviewer was almost certainly asking about.
+**When it's used:** Whenever a decision-maker needs to choose between options and wants the analysis to point toward one.
+**Example (Titanic-style survival data, reframed as a modern safety recommendation):** *"Passenger-class-based evacuation priority is not correlated with actual survival need. Recommend evacuation protocols be redesigned around cabin proximity to exits, not ticket class."*
+The signature of this report type: it ends with a clear "recommend X," not just an observation.
+
+### 5. Exploratory / Insight Report
+**What it does:** Answers "what did we find that we didn't expect?" Used when there's no specific question yet — you're mining the data to find what's worth investigating further.
+**When it's used:** Early-stage analysis, a new dataset, or "just see what's interesting in here."
+**Example (Titanic dataset, exploratory framing):** *"Unexpectedly, port of embarkation (Cherbourg vs Southampton vs Queenstown) shows a stronger survival correlation than raw fare price — worth investigating whether this reflects cabin location rather than ticket cost."*
+This type often *leads into* one of the other four once something interesting is found.
+
+## How to choose, fast
+
+Ask yourself one question before writing anything:
+
+| If the question in the room is... | Write a... |
+|---|---|
+| "Where do we stand?" | Descriptive |
+| "Why did this happen?" | Diagnostic |
+| "What's likely to happen next?" | Predictive |
+| "What should we do?" | Recommendation |
+| "What's in here worth knowing?" | Exploratory |
+
+Most real work reports are actually a **blend** — commonly Diagnostic → Recommendation in the same document ("here's why it happened, and here's what to do about it"). That combination is very close to what your interviewer was picturing when they asked how you'd report after a dashboard.
+
+## Tying back to your interview
+
+When they asked *"how do you prepare a report after the dashboard,"* they weren't asking if you can describe a chart (that's Descriptive — the easy part). They were almost certainly picturing Diagnostic + Recommendation: explain *why* the dashboard shows what it shows, and say *what should happen next*. That combination is what separates someone who reads a dashboard from someone who's actually useful to a decision-maker.
+
+## Quick check
+
+1. Which report type would you write if your manager asks "why did website traffic drop 20% last week"?
+2. Which type would you write if a stakeholder just hands you a brand-new dataset and says "see what's in there"?
+3. Look back at your own interview question. Which type (or combination) do you think they were really expecting?
+
+---
+**Next:** [Lesson 3 — Anatomy of a Report](03-anatomy-of-a-report.md) *(coming next)*
