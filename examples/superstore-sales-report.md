@@ -26,7 +26,7 @@ The dataset has no order date column, so this report does not cover trends over 
 
 ## Dashboard overview
 
-[SCREENSHOT: Full dashboard]
+![Superstore dashboard](../case-study/superstore-dashboard//dashboard/superstore-dashboard.png)
 
 The dashboard shows total sales, total profit, units sold, and average discount rate at the top. Below that are four charts covering region, sub-category, and the relationship between discount and profit margin.
 
@@ -34,12 +34,12 @@ The dashboard shows total sales, total profit, units sold, and average discount 
 
 ## Key numbers
 
-| Metric | Value |
-|---|---|
-| Total Sales | 2.30M |
-| Total Profit | 286.24K |
-| Units Sold | 38K |
-| Average Discount Rate | 15.63% |
+| Metric                | Value         |
+| --------------------- | ------------- |
+| Total Sales           | 2.30M         |
+| Total Profit          | 286.24K       |
+| Units Sold            | 38K           |
+| Average Discount Rate | 15.63%        |
 | Overall Profit Margin | roughly 12.4% |
 
 [SCREENSHOT: KPI cards]
