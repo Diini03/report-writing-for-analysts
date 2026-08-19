@@ -26,7 +26,7 @@ The dataset has no order date column, so this report does not cover trends over 
 
 ## Dashboard overview
 
-![Superstore dashboard](dashboard/screenshot.png)
+![Superstore dashboard](dashboard/superstore-dashboard.png)
 
 The dashboard shows total sales, total profit, units sold, and average discount rate at the top. Below that are four charts covering region, sub-category, and the relationship between discount and profit margin.
 
