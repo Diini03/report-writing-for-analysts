@@ -1,66 +1,59 @@
-# Lesson 2: The Types of Reports
+# Lesson 2: Types of Analytical Reports
 
-Most beginners write the same report no matter what's being asked of them, usually a long summary of everything they found. An experienced analyst picks the type first, based on the question sitting in the room, and that choice shapes the length, the tone, and what goes first.
+## Why classification matters
 
-## The five types, at a glance
+Analysts who have not been taught to classify reports tend to write the same document regardless of the situation, typically a broad summary of everything they found. Analysts with more experience choose the type of report before writing a single sentence, because the type determines the structure, the length, and what belongs at the top.
 
-| If the question is           | Write          | What it does                        |
-| ---------------------------- | -------------- | ----------------------------------- |
-| Where do we stand            | Status         | A clean snapshot, no digging yet    |
-| Why did this happen          | Diagnostic     | Finds the cause behind a number     |
-| What's likely to happen next | Predictive     | Projects forward from a trend       |
-| What should we do            | Recommendation | Ends in a clear action              |
-| What's worth knowing in here | Exploratory    | Goes looking, no fixed question yet |
+There are five report types that cover the large majority of situations a data analyst will encounter.
 
-## Status report
+| Type           | Central question                                        | Typical use                        |
+| -------------- | ------------------------------------------------------- | ---------------------------------- |
+| Status         | Where do things currently stand                         | Recurring reviews, progress checks |
+| Diagnostic     | Why did this happen                                     | Investigating an unexpected change |
+| Predictive     | What is likely to happen next                           | Planning, early warning            |
+| Recommendation | What should be done                                     | Supporting a decision              |
+| Exploratory    | What is present in this data that was not already known | Early stage analysis of new data   |
 
-Answers where things stand, nothing more.
+## Status reports
 
-> August revenue came in at 412 thousand, six percent below target. West is on pace. East and central are both trailing.
+A status report presents a snapshot without attempting to explain causes. It is descriptive by design.
 
-**Your turn.** Write a two sentence status report for this fact: your Somalia displacement classifier has been queried 340 times this month, up from 210 last month.
+> Quarterly revenue reached 412,000, six percent below target. The West region met its target. East and Central both fell short.
 
-## Diagnostic report
+Status reports are the most common report type in ongoing business operations, and the least demanding to write, because no causal claim is being made.
 
-Answers why. Goes one layer under the status report.
+## Diagnostic reports
 
-> Churn rose four percent this quarter. The increase is concentrated among basic plan users who went quiet for two weeks before leaving, pointing to boredom rather than price.
+A diagnostic report identifies the likely cause behind a change that has already been observed.
 
-**Your turn.** You're told app crashes doubled last week. Write one diagnostic sentence guessing at a plausible cause, and say what you'd check to confirm it.
+> Customer churn increased by four percent this quarter. The increase is concentrated among customers on the lowest priced plan who had reduced their product usage in the two weeks before cancelling, which suggests disengagement rather than price sensitivity as the primary driver.
 
-## Predictive report
+The distinction from a status report is direct. A status report states that churn increased. A diagnostic report explains why.
 
-Answers what happens next if nothing changes.
+## Predictive reports
 
-> At the current growth rate, projected case counts will exceed ICU capacity within twelve days.
+A predictive report projects a trend forward and states what is likely to occur if current conditions continue.
 
-This is where your machine learning background plugs directly into report writing. A model's output becomes the evidence sitting under a predictive report.
+> Based on current growth rates, demand is projected to exceed available capacity within twelve days if no adjustment is made.
 
-**Your turn.** Given website traffic has grown 5 percent week over week for six weeks straight, write one predictive sentence about where it lands a month from now, and what should happen because of it.
+This is the report type most directly connected to statistical modelling and machine learning work, since a model's forecast frequently becomes the evidence a predictive report is built on.
 
-## Recommendation report
+## Recommendation reports
 
-Answers what should we do. This is almost certainly the type your interviewer had in mind.
+A recommendation report states what should be done, based on the evidence presented. It is the type most frequently expected in interview settings, because it demonstrates judgment rather than description alone.
 
-> Passenger class wasn't really the driver of survival, cabin location was. Any modern evacuation plan should be built around distance to the exit, not what category a ticket falls into.
+> Evacuation outcomes in the Titanic dataset were more strongly associated with cabin proximity to exits than with passenger class. A modern evacuation protocol modeled on this pattern should prioritize physical location over category.
 
-The signature of this type, it always ends in a recommend, never just an observation left hanging.
+A recommendation report is identifiable by its ending. It closes with a stated action, not an open observation.
 
-**Your turn.** Given east region shipping delays are tied to a new vendor, write one recommendation sentence that names a specific action.
+## Exploratory reports
 
-## Exploratory report
+An exploratory report is used before a specific question has been formed, typically when an analyst is examining a new dataset for the first time and looking for patterns worth investigating further.
 
-Answers what's in here that we didn't expect. Used early, before there's a fixed question yet, just looking for what's worth chasing.
+> Port of embarkation shows a stronger association with survival than ticket fare does, which may indicate that embarkation port is acting as a proxy for cabin location rather than for economic status. This warrants further investigation before any conclusion is drawn.
 
-> Port of departure predicts survival better than fare paid. Worth checking whether this is really about cabin location rather than ticket price.
+Exploratory reports frequently lead into one of the other four types once a specific pattern has been identified as worth pursuing.
 
-**Your turn.** Imagine you're handed a brand new dataset of customer reviews with no instructions. Write one exploratory sentence about something you'd look for first, and why.
+## Reports are usually combined
 
-## Tying it back
-
-Most real requests blend two of these in a single document, usually diagnostic and recommendation together: here's why it happened, here's what to do about it. That combination is almost certainly what your interviewer expected when they asked about reporting after a dashboard.
-
-## Before you move on
-
-1. If your manager asked why website traffic dropped 20 percent last week, which type would you reach for first.
-2. Looking back at your own interview question, which type, or combination, do you now think they expected from you.
+In practice, most professional reports blend two of these types in a single document, most commonly diagnostic and recommendation together: an explanation of why something occurred, followed by a stated action in response to it. When an analyst is asked how they would report on a dashboard, this combination is generally what is being requested, even when the question itself does not name a specific report type.
